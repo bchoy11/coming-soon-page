@@ -2,4 +2,4 @@
 
 Project challenge from FEM: 
 
-https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0/hub/base-apparel-coming-soon-page-vjR0mNcq8
+https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0
