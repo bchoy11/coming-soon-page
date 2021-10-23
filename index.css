@@ -161,4 +161,10 @@ p{
     .email{
         width: 26rem;
     }
+
+    .background{
+        z-index: -1;
+        grid-column: 1/7;
+        grid-row: 1/-1;
+    }
 }
