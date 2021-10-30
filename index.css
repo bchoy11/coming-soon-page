@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 html{
     box-sizing: border-box;
+    position: absolute;
 }
 
 *, *:before, *:after{
@@ -46,6 +47,12 @@ footer{
     bottom:0px;
 }
 
+/* form styles*/
+
+form{
+    margin-bottom:0;
+}
+
 .submit, .email{
     border-radius:50px 50px 50px 50px;
 }
@@ -66,12 +73,22 @@ footer{
     height: 3rem;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
     box-shadow: 5px 1rem 1.2rem hsl(0, 100%, 93%);
-    z-index: 2;
+    z-index: 1;
 }
 
 .submit:hover{
     background-image: linear-gradient(135deg, hsl(0, 80%, 93%),hsl(0, 74%, 92%));
     box-shadow: 5px 1rem 1.2rem hsl(0, 100%, 90%);
+}
+
+input:not(:focus):invalid{
+    border: solid red !important;
+}
+
+#error-message{
+    color: red !important;
+    margin-top: 1rem;
+    display:none;
 }
 
 /* .error{
@@ -107,6 +124,13 @@ p{
     text-align: center;
 }
 
+
+@media (max-width:750px){   
+.background{
+    display: none;
+}
+
+}
 @media (min-width:750px){
     .heading{
         text-align:left;
@@ -117,6 +141,12 @@ p{
     .content{
         margin-top:3rem;
         margin-bottom: 5rem;
+    }
+
+    .background{
+        position: absolute;
+        z-index: -1;
+        height: 100%;
     }
 
     h1, h3{
@@ -166,5 +196,9 @@ p{
         z-index: -1;
         grid-column: 1/7;
         grid-row: 1/-1;
+    }
+
+    #error-message{
+        margin-left: 2rem;
     }
 }

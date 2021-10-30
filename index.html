@@ -35,14 +35,15 @@
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
         <form>
-          <input type="email" placeholder="Email Address" class="email">
+          <input type="email" placeholder="Email Address" class="email" id="email">
           <!-- error image -->
           <!-- <img src="images/icon-error.svg" alt="error icon" class="error"> -->
-          <button type="submit" class="submit">
+          <button type="submit" class="submit" id='submit'>
             <img src="images/icon-arrow.svg" alt="submit button image">
           </button>
-          <!-- add script for showing error image when email is not valid -->
+          
         </form>
+        <p id="error-message">please provide a valid email</p>
       </div>
       
       <footer>
@@ -53,4 +54,14 @@
       </footer>
     </div>
 </body>
+
+  <script>
+    console.log(document.forms);
+    document.querySelector('#submit').addEventListener('click', function() {
+    const isValid = document.querySelector('#email').reportValidity();
+    const error=document.getElementById('error-message');
+    const input=document.getElementById('email');
+    isValid?error.style='display: none':error.style='display: block';
+});
+  </script>
 </html>
