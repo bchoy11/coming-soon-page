@@ -36,8 +36,7 @@
         </p>
         <form>
           <input type="email" placeholder="Email Address" class="email" id="email">
-          <!-- error image -->
-          <!-- <img src="images/icon-error.svg" alt="error icon" class="error"> -->
+          <img src="images/icon-error.svg" alt="error icon" class="error" id='error-icon'>
           <button type="submit" class="submit" id='submit'>
             <img src="images/icon-arrow.svg" alt="submit button image">
           </button>
@@ -61,7 +60,15 @@
     const isValid = document.querySelector('#email').reportValidity();
     const error=document.getElementById('error-message');
     const input=document.getElementById('email');
-    isValid?error.style='display: none':error.style='display: block';
+    const errorIcon=document.getElementById('error-icon');
+    if(isValid){
+      error.style='display: none';
+      errorIcon.style='display: none';
+    }
+    else{
+      error.style='display: block';
+      errorIcon.style='display: inline-block';
+    }
 });
   </script>
 </html>

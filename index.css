@@ -50,6 +50,7 @@ footer{
 /* form styles*/
 
 form{
+    position: relative;
     margin-bottom:0;
 }
 
@@ -91,9 +92,13 @@ input:not(:focus):invalid{
     display:none;
 }
 
-/* .error{
-    margin-left: -10rem;
-} */
+.error{
+    display: none;
+    position: absolute;
+    top: .75rem;
+    right: 8rem;
+    z-index: 3;
+}
 
 /* text styling */
 
@@ -200,5 +205,9 @@ p{
 
     #error-message{
         margin-left: 2rem;
+    }
+    
+    .error{
+        right: 7.5rem;
     }
 }
